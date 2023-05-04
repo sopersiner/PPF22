@@ -17,7 +17,7 @@ from ..core.logger import logging
 # https://github.com/pyrogram/pyrogram/blob/master/docs/source/faq/what-are-the-ip-addresses-of-telegram-data-centers.rst
 _PYRO_FORM = {351: ">B?256sI?", 356: ">B?256sQ?", 362: ">BI?256sQ?"}
 
-LOGS = logging.getLogger("سورس تيبثون")
+LOGS = logging.getLogger("سورس دراكون")
 
 DC_IPV4 = {
     1: "149.154.175.53",
@@ -33,7 +33,7 @@ def bothseesion(session, logger=LOGS, _exit=True):
         # Telethon Code
         if session.startswith(CURRENT_VERSION):
             if len(session.strip()) != 353:
-                logger.exception("عذراً .. كود جلسة تيليثون غير صحيح قم بالتأكـد منه")
+                logger.exception("عذراً .. كود جلسة دراكون غير صحيح قم بالتأكـد منه")
                 sys.exit()
             return StringSession(session)
         # Pyrogram Code
@@ -61,7 +61,7 @@ def bothseesion(session, logger=LOGS, _exit=True):
                 ).decode("ascii")
             )
         else:
-            logger.exception("عذراً .. كود جلسة تيليثون غير صحيح قم بالتأكـد منه")
+            logger.exception("عذراً .. كود جلسة دراكون غير صحيح قم بالتأكـد منه")
             if _exit:
                 sys.exit()
     logger.exception("عذراً .. لم يتم ايجاد كود جلسة تيرمكس لذلك توقفت العملية")
